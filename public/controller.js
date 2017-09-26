@@ -8,9 +8,7 @@ app.controller('myCtrl', function($scope, $http) {
     		last_name: $scope.lastName,
     		contact_number: $scope.contactNumber
     	}
-    	console.log('newContact: ', newContact);
     	$http.post('/api/contacts', newContact).then(function(res){
-	    	console.log('post res: ', res);
 	    	getContacts();
 	    	$scope.firstName = null;
 	    	$scope.lastName = null;
@@ -20,9 +18,7 @@ app.controller('myCtrl', function($scope, $http) {
 
     function getContacts () {
 	    $http.get('/api/contacts').then(function(res){
-	    	console.log('res: ', res);
 	    	$scope.allContacts = res.data;
-
 	    });
     }
 });
