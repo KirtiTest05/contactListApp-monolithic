@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>
+This is a sample MEAN App.
+</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<h2>ContactList App</h2>
+	<div ng-repeat="contact in allContacts">
+		firstName: {{contact.first_name}} <br/>
+		lastName: {{contact.last_name}} <br/>
+		contactNumber: {{contact.contact_number}}
+
+	</div>
+</body>
+</html>
